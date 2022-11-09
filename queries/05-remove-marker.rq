@@ -1,0 +1,6 @@
+PREFIX temp: <http://example.org/temp/>
+
+DELETE { ?s temp:isCS 1 }
+where {
+  ?s temp:isCS 1 .
+}

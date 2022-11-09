@@ -1,0 +1,15 @@
+PREFIX ma_prop: <https://makg.org/property/>
+PREFIX ma_ent: <https://makg.org/entity/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX temp: <http://example.org/temp/>
+
+DELETE { ?s ?p ?o }
+where {
+  VALUES ?p {
+    ma_prop:hasParent
+    ma_prop:isRelatedTo
+  }
+  ?s ?p ?o .
+  FILTER NOT EXISTS { ?o temp:isCS 1 . }
+}

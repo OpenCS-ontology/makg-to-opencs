@@ -1,0 +1,10 @@
+PREFIX ma_prop: <https://makg.org/property/>
+PREFIX ma_ent: <https://makg.org/entity/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX temp: <http://example.org/temp/>
+
+INSERT { ?s temp:isCS 1 }
+where {
+  ?s ma_prop:hasParent+ ma_ent:41008148
+}

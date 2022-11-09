@@ -1,0 +1,20 @@
+PREFIX ma_prop: <https://makg.org/property/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+DELETE {
+  ?s ?p ?o
+}
+WHERE {
+  VALUES ?p {
+    ma_prop:rank
+    dct:created
+    ma_prop:diseaseHasSymptom
+    ma_prop:diseaseHasMedicalTreatment
+    ma_prop:medicalTreatmentForDiseaseCause
+    ma_prop:medicalTreatmentForSymptom
+    ma_prop:symptomHasDiseaseCause
+    ma_prop:diseaseHasDiseaseCause
+  }
+  ?s ?p ?o
+}
